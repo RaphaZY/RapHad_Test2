@@ -2,6 +2,7 @@ from calculadora import CalculadoraCientifica
 import unittest
 
 class TesteCalculadora(unittest.TestCase):
+<<<<<<< HEAD
     
     def setUp(self):
         self.calc = CalculadoraCientifica()
