@@ -49,4 +49,3 @@ class CalculadoraCientifica:
         radianos = math.radians(angulo)
         self.ultimo_resultado = f"{math.tan(radianos):.2f}"
         return self.ultimo_resultado
-    
