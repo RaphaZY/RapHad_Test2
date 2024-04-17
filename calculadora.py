@@ -33,8 +33,7 @@ class CalculadoraCientifica:
         return self.ultimo_resultado
     
     def logaritmo(self, log, base):
-        self.ultimo_resultado = math.log(log,base)
-        return self.ultimo_resultado
+        return math.log(log,base)
     
     def seno(self,angulo):
         radianos = math.radians(angulo)
