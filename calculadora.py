@@ -28,7 +28,7 @@ class CalculadoraCientifica:
         return math.sqrt(n1)
     
     def logaritmo(self, log, base):
-        return math.log(log,base)
+        return f'{math.log(log,base):.2f}'
     
     def seno(self,angulo):
         radianos = math.radians(angulo)
