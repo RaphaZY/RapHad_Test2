@@ -29,3 +29,16 @@ class Calculadora:
     
     def logaritmo(self, log, base):
         return math.log(log,base)
+    
+    def seno(self,angulo):
+        radianos = math.radians(angulo)
+        return f"{math.sin(radianos):.2f}"
+    
+    def cosseno(self,angulo):
+        radianos = math.radians(angulo)
+        return f"{math.cos(radianos):.2f}"
+
+    def tangente(self,angulo):
+        radianos = math.radians(angulo)
+        return f"{math.tan(radianos):.2f}"
+
