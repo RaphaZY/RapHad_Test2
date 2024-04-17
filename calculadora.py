@@ -1,31 +1,31 @@
 import math
 
-class Calculadora:
+class CalculadoraCientifica:
     def __init__(self):
-        pass
+        self.ultimo_resultado = None
     
-    def somar(self, n1:int, n2:int):
-        return n1 + n2
+    def adicao(self, n1:int, n2:int):
+        self.ultimo_resultado = n1 + n2
+        return self.ultimo_resultado
     
-    def subtrair(self, n1:int, n2:int):
+    def subtracao(self, n1:int, n2:int):
         return n1 - n2
     
-    def multiplicar(self, n1:int, n2:int):
+    def multiplicacao(self, n1:int, n2:int):
         return n1 * n2
     
-    def dividir(self, n1:int, n2:int):
+    def divisao(self, n1:int, n2:int):
         if n2 == 0 or n1 == 0:
             raise ZeroDivisionError('Divisão Por Zero')
         return n1 / n2
     
-    def porcentagem(self, valor:int, percentual:int):
-        return (valor * percentual) / 100
-    
-    def raiz_quadrada(self, n1:int):
-        return math.sqrt(n1)
-    
     def potenciacao(self, base:int, expoente:int):
         return base ** expoente
+
+    def raiz_quadrada(self, n1:int):
+        if n1 < 0:
+           raise ValueError('Número negativo inserido')
+        return math.sqrt(n1)
     
     def logaritmo(self, log, base):
         return math.log(log,base)
@@ -41,4 +41,3 @@ class Calculadora:
     def tangente(self,angulo):
         radianos = math.radians(angulo)
         return f"{math.tan(radianos):.2f}"
-
