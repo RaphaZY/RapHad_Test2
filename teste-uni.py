@@ -7,7 +7,7 @@ class TesteCalculadora(unittest.TestCase):
         self.calc = CalculadoraCientifica()
 
     def test_filtrar(self):
-        pass
+        self.assertNotEqual(self.calc.filtrar(2,1),'a')
 
     def test_adicao(self):
         self.assertEqual(self.calc.adicao(150,150),300)
