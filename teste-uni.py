@@ -2,8 +2,7 @@ from calculadora import CalculadoraCientifica
 import unittest
 
 class TesteCalculadora(unittest.TestCase):
-<<<<<<< HEAD
-    
+
     def setUp(self):
         self.calc = CalculadoraCientifica()
 
@@ -20,5 +19,24 @@ class TesteCalculadora(unittest.TestCase):
         self.assertEqual(self.calc.subtracao(11,12),-1)
         self.assertEqual
         
+    def test_divicao(self):
+        with self.assertRaises(ZeroDivisionError):
+            self.calc.divisao(1,0)
+        self.assertEqual(self.calc.divisao(10000,10),1000)
+        self.assertEqual(self.calc.divisao(16,4),4)
+    
+    def test_raiz_quadrada(self):
+        self.assertEqual(self.calc.raiz_quadrada(25),5)
+        with self.assertRaises(ValueError):
+            self.calc.raiz_quadrada(-25)
+        self.assertNotEqual(self.calc.raiz_quadrada(100),1)
+    
+    def test_logaritimo(self):
+        self.assertEqual(self.calc.logaritmo(10,10),1)
+        self.assertNotEqual(self.calc.logaritmo(20,10),1)
+        
+
+
+
 if __name__ == '__main__':
     unittest.main()
