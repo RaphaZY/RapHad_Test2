@@ -7,7 +7,7 @@ class TesteCalculadora(unittest.TestCase):
         self.calc = CalculadoraCientifica()
 
     def test_filtrar(self):
-        pass
+        self.assertNotEqual(self.calc.filtrar(2,1),'a')
 
     def test_adicao(self):
         self.assertEqual(self.calc.adicao(150,150),300)
@@ -41,16 +41,10 @@ class TesteCalculadora(unittest.TestCase):
     def test_logaritimo(self):
         self.assertEqual(self.calc.logaritmo(10,10),1)
         self.assertNotEqual(self.calc.logaritmo(20,10),1)
-        
+
     def test_potenciacao(self):
         self.assertEqual(self.calc.potenciacao(5,2),25)
         self.assertEqual(self.calc.potenciacao(10,3),1000)
-
-   
-    
-        
-
-
 
 if __name__ == '__main__':
     unittest.main()
