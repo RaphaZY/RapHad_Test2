@@ -47,19 +47,23 @@ class CalculadoraCientifica:
     def seno(self,angulo):
         self.filtrar(angulo)
         radianos = math.radians(angulo)
-        self.ultimo_resultado = f"{math.sin(radianos):.2f}"
+        self.ultimo_resultado = math.sin(radianos)
         return self.ultimo_resultado
     
     def cosseno(self,angulo):
         self.filtrar(angulo)
         radianos = math.radians(angulo)
-        self.ultimo_resultado =f"{math.cos(radianos):.2f}"
-        return self.ultimo_resultado
+        self.ultimo_resultado = math.cos(radianos)
+        return self.ultimo_resultado 
 
     def tangente(self,angulo):
         self.filtrar(angulo)
-        radianos = math.radians(angulo)
-        self.ultimo_resultado = f"{math.tan(radianos):.2f}"
+        if angulo == 90:
+            return 'Não existe: valor 0'
+        else:
+            radianos = math.radians(angulo)
+            self.ultimo_resultado = math.tan(radianos)
+            return self.ultimo_resultado
 
 #c = CalculadoraCientifica()
-#print()
+#print(c.))

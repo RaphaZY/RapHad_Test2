@@ -46,5 +46,14 @@ class TesteCalculadora(unittest.TestCase):
         self.assertEqual(self.calc.potenciacao(5,2),25)
         self.assertEqual(self.calc.potenciacao(10,3),1000)
 
+    def test_seno(self):
+        self.assertEqual(self.calc.seno(80),0.984807753012208)
+        self.assertNotEqual(self.calc.seno(30),0.51512154123154)
+    
+    def test_cosseno(self):
+        self.assertEqual(self.calc.cosseno(30),0.8660254037844387)
+        self.assertNotEqual(self.calc.cosseno(30),0.51651321151231)
+
+
 if __name__ == '__main__':
     unittest.main()
